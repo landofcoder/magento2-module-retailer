@@ -91,9 +91,10 @@ class Save extends AbstractRetailer
             foreach ($this->postDataHandlers as $handler) {
                 $data = $handler->getData($model, $data);
             }
-
             $model->setData($data);
             $model->setStoreId($storeId);
+
+
             if ($media) {
                 $model->setMediaPath($media);
             }
